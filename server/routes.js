@@ -35,8 +35,8 @@ router.put("/todos/:id", async (req, res) => {
     const collection = getCollection();
     const _id = new ObjectId(req.params.id);
     const { status } = req.body;
-
-    if (typeof status !== "boolean") {
+                        //yes or No
+    if (typeof status !== "boolean") { //makita kung true or false
         return res.status(400).json({ mssg: "invalid status" });
     }
   
